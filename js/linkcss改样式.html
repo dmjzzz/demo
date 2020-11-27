@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- herf加入css文件即可 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        #d2{
+            background-color: chocolate;
+            font-size: 100px;
+        }
+    </style>
+</head>
+<!-- 优先级问题
+！important  不要常用 当时爽 后期难
+内联
+id选择器
+属性选择器 类选择器 伪类
+标签选择器 伪元素
+检查的后台也可以看复杂的优先级
+ -->
+<body>
+    <!-- link引入 -->
+    <div id="d1">
+        Hello world          
+    </div>
+    <!-- style标签 -->
+    <div id="d2">
+        Hello world
+    </div>
+    <!-- style属性 -->
+    <div id="d3" style="background-color: blue;font-size: 100px;">
+        Hello world
+    </div>
+</body>
+</html>
