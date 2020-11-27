@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d{
+            width: 600px;
+            /* 通常是子元素撑起父元素的高度这里不设置高度不会撑起会塌陷
+            下面的hello world会因为浮动占到第一行 */
+            margin: 0 auto;
+            background-color: indigo;
+        }
+        .d1{
+            display: inline-block;
+            width: 200px;
+            height: 100px;
+            background-color: khaki;
+            float: left;
+        }
+        .clear{
+            /* 清除浮动 清除左右的浮动防止高度塌陷 */
+            clear: both;
+        } 
+             /* 最佳方案 */
+        .f{
+            width: 600px;
+            margin: 0 auto;
+            background-color: indigo;
+        }
+        .f1{
+            display: inline-block;
+            width: 200px;
+            height: 100px;
+            background-color: khaki;
+            float: left;
+        }
+        /* 父元素后使用伪元素解决浮动塌陷
+        用一个clear类谁用谁去加 */
+        .clear:after{
+            content:"";
+            /* 把之前的div用伪元素来替代也是变为块元素 */
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<!-- 浮动高度塌陷问题 
+1.设置父元素高度 但是一般是由于子元素撑起高度的所以不设置会塌陷
+2.用加一个div sytle中 clear：both 不太好
+3.最佳方案 用伪元素去clear:both-->
+<body>
+    <div class="d">
+        <div class="d1"></div>
+        <div class="d1"></div>
+        <div class="d1"></div>
+        <div class="clear"></div>
+    </div>
+    <h1>hello wordl</h1>
+<!-- 最佳方案 -->
+<!-- 直接加上clear -->
+    <div class="f clear" >
+        <div class="f1"></div>
+        <div class="f1"></div>
+        <div class="f1"></div>
+    </div>
+    <h1>hello wordl</h1>
+</body>
+</html>
