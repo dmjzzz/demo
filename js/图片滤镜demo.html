@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        img {
+            widows: 100px;
+            height: auto;
+            display: block;
+            margin: 0 auto;      
+        }
+        .img1{
+             /* 滤镜设置
+            -webkit-filter设置元素的可视效果是百分比的
+            /* grayscale为灰色正常为0 */
+            /* brightness:亮度默认是1 */
+            /* sepia:褐色 正常为0 */ 
+            /* blur模糊度 */
+            /* contrast对比度正常为1*/
+            /* saturate饱和度正常为1*/
+            /* invert为胶片底色效果 */
+            /* hue-rotate色相旋转 
+               空格隔开  filter可以解决兼容    */
+            filter:grayscale(1) brightness(10);
+            /* transitong为渐变 */
+            transition: all 1s;
+        }
+        /* 元素:hover为鼠标放上去的情况 */
+        .img1:hover{
+            -webkit-filter:grayscale(0) brightness(1);
+            filter:grayscale(0) brightness(1);
+        }
+    </style>
+</head>
+<body>
+    <img class="img1" src="../img/timg.gif" alt="">
+</body>
+</html>
