@@ -18,15 +18,15 @@
         }
         /* 选择下一个子选择器 */
         .d1>div{
-            background-color: darkorange;
+            background-color:black;
             height: 20px;
             width:auto;
         }
-        /* 选择下一个元素 */
+        /* 选择直接的下一个元素 下一个不是就不变*/
         /* .换~是选中后面的多个元素 */
-        .d2+div{
+        .d4+div{
             background-color: dodgerblue;
-            width: 30px;
+            width: 300px;
             height: auto;
         }
     </style>
@@ -53,7 +53,7 @@
     </div>
     <!-- 选择元素的下一个元素 -->
     <div></div>
-    <div class="d2"></div>
+    <div class="d4"></div>
     <div>hello world</div>
     <div>hello world2</div>
 </body>

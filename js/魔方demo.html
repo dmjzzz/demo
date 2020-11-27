@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 3D设置透视点 可以决定你能不能看到向Z轴过来的图片*/
+        body{
+            perspective:1000px ;
+            background-image: url(../img/u=1975314154\,2588496944&fm=26&gp=0.jpg);
+            background-size: 100% 100%;
+        }
+        .lifang{
+            width: 200px;
+            height: 200px;
+            margin: 200px auto;
+            position: relative;
+            /* 看的是子元素的3D在父元素中保留3D */
+            transform-style: preserve-3d;
+            /* 过渡动画 */
+            transform: rotate3d(1,1,1,0deg);
+            transition: all 10s;
+        }
+        .lifang:hover{
+            /* 指定轴3D旋转 原点到空间坐标*/
+            transform: rotate3d(1,1,1,720deg);
+        }
+        .page{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            /* 设置透明度 */
+            opacity: 0.6;
+        }
+        .yi{
+            /* 设置背景图片 */
+            background-image: url(../img/1.jpg);
+            /* 两个值一个宽一个高只设定一个值默认是平铺 */
+            background-size: 100% 100%;
+            transform: translateZ(100px); 
+        }
+        .er{
+            background-image: url(../img/2.jpg);
+            background-size: 100% 100%;
+            transform: translateZ(-100px); 
+        }
+        .san{
+            background-image: url(../img/3.jpg);
+            background-size: 100% 100%;
+            transform: rotateY(90deg) translateZ(100px) 
+        }
+        .si{
+            background-image: url(../img/4.jpg);
+            background-size: 100% 100%;
+            transform: rotateY(-90deg) translateZ(100px)
+        }
+        .wu{
+            background-image: url(../img/5.jpg);
+            background-size: 100% 100%;
+            transform: rotateX(90deg) translateZ(100px)
+        }
+        .liu{
+            background-image: url(../img/6.jpg);
+            background-size: 100% 100%;
+            transform: rotateX(-90deg) translateZ(100px)
+        }
+    
+    </style>
+</head>
+<body>
+    
+    <div class="lifang">
+        <div class="page yi"></div>
+        <div class="page er"></div>
+        <div class="page san"></div>
+        <div class="page si"></div>
+        <div class="page wu"></div>
+        <div class="page liu"></div>
+    </div>
+</body>
+</html>

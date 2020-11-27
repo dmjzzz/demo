@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d1{
+            width: 100px;
+            height: 100px;
+            background-color: darkseagreen;
+            /* 2D移动 水平右为正 垂直下为正 */
+            transform:translate(100px,100px);
+        }
+        .d2{
+            width: 100px;
+            height: 100px;
+            background-color: darkseagreen;
+            margin: 100px auto;
+            /* 2D的平面 rotate旋转 顺时针的旋转 */
+            transform: rotate(30deg);
+        }
+        .d3{
+            width: 100px;
+            height: 100px;
+            background-color: darkseagreen;
+            margin: 200px auto;
+            /* 3D的旋转绕一个轴 正方形会变得不像 因为投影
+            绕着Z轴旋转其实和平面差不多 */
+            transform: rotateY(45deg);
+        }
+        
+        .d4{
+            width: 1200px;
+            height: 100px;
+            background-color: red;
+            margin: 100px auto;
+            /* 就是放大缩小z轴移动 */
+            transform: translateZ(100px);
+        }
+        body{
+            /* 3D的效果得有人在一个地方看它旋转 这个人就是透视点 */
+            perspective: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <div class="d1">
+
+    </div>
+    <div class="d2">
+
+    </div>
+    <div class="d3">
+
+    </div>
+    <div class="d4">
+
+    </div>
+</body>
+</html>

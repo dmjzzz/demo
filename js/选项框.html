@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d1{
+            width: 200px;
+            height:200px;
+            border: 1px solid green;
+        }
+        /* ~是后面的所有div元素被选择 */
+        #red:checked~div{
+            background-color: red;
+
+        }
+        #black:checked~div{
+            background-color: #000000;
+
+        }
+        #blue:checked~div{
+            background-color: blue;
+
+        }
+        .btn{
+            /* lable元素不是块级元素 */
+            display:inline-block;
+            width: 50px;
+            height: 30px;
+            margin: 6px;
+            /* 文本居中 */
+            text-align: center;
+            /* 文字垂直居中 */
+            line-height: 30px;
+            border: 1px solid green;
+            /* 圆角 */
+            border-radius: 5px;
+            box-shadow:0px 0px 0px  #333;
+            transition: all 0.5s;
+        }
+        .btn:hover{
+            /* 阴影盒子只设置模糊度会有内发光的效果
+            因为外面比里面暗所以里面发光 */
+            box-shadow:0px 0px 30px  #333;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="POST">
+        <input type="text" name="username" value="">
+        <input type="password" name="password" value="">
+        <hr>
+        <!-- 单选框 radio name必须是一样的 -->
+        男
+        <input type="radio" name="gender" value="男">
+        女
+        <input type="radio" name="gender" value="女">
+        <hr>
+        <!-- 复选框 checkbox name也一样-->
+        你喜欢的城市
+        <input type="checkbox" name="city" id="" value="广州">广州
+        <input type="checkbox" name="city" id="" value="北京">北京
+        <input type="checkbox" name="city" id="" value="上海">上海
+        <input type="checkbox" name="city" id="" value="武汉">武汉
+        <input type="submit" value="注册">
+    </form>
+    <hr>
+    <h3>你喜欢的颜色</h3>
+    <!-- label的for去绑定一个选项框的id 可以改变选项框变好看 因为lable就是那个
+    选项框 -->
+    <!-- lable的class属性设置btn为按钮 -->
+    <label class="btn" for="red">red</label>
+    <!-- hidden隐藏选项框 -->
+    <input type="radio" name="color" id="red" value="red" hidden>
+    <label class="btn" for="black">black</label>
+    <input type="radio" name="color" id="black" value="black" hidden>
+    <label class="btn" for="blue">blue</label>
+    <input type="radio" name="color" id="blue" value="blue" hidden>
+    <div class="d1">
+
+    </div>
+</body>
+</html>
