@@ -24,12 +24,12 @@
             /* hue-rotate色相旋转 
                空格隔开  filter可以解决兼容    */
             filter:grayscale(1) brightness(10);
-            /* transitong为渐变 */
+            /* transition为渐变 */
             transition: all 1s;
         }
         /* 元素:hover为鼠标放上去的情况 */
         .img1:hover{
-            -webkit-filter:grayscale(0) brightness(1);
+            /* -webkit-filter:grayscale(0) brightness(1);兼容问题 */
             filter:grayscale(0) brightness(1);
         }
     </style>

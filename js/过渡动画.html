@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d1{
+            width: 100px;
+            height: 200px;
+            background-color: red;
+            /* 过渡效果 综合性设置*/
+            /* transition: width 3s; */
+            /* 设置过渡的属性 可以指定某个进行过渡
+            逗号隔开 全部都有过渡效果则是all */
+            transition-property:width,background-color; 
+            /* 过渡时间 */
+            transition-duration: 3s;
+            /* 过渡变化的速度 检查中有小球
+            ease 先慢后快
+            linear 线性变化
+            ease-in 从慢到快
+            ease-out 从快到慢 
+            自定义调节 检查拖动小球获取贝塞尔曲线*/
+            transition-timing-function: cubic-bezier(0.25, 0.1, 0.14, 0.83);
+            /* 设置延迟时间 */
+            transition-delay: 1s; 
+        }
+        .d1:hover{
+            width: 800px;
+            height: 200px;
+            background-color:green;
+        }
+    </style>
+</head>
+<body>
+    <div class="d1">
+
+    </div>
+</body>
+</html>
