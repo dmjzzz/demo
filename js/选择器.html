@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 子选择器nth-child */
+        li:nth-child(1){
+            background-color: coral;
+        }
+        /* 子选择器last-child */
+        li:last-child{
+            background-color: cornsilk;
+        }
+        [dada-src]{
+            background-color: darkgoldenrod;
+        }
+        /* 选择下一个子选择器 */
+        .d1>div{
+            background-color: darkorange;
+            height: 20px;
+            width:auto;
+        }
+        /* 选择下一个元素 */
+        /* .换~是选中后面的多个元素 */
+        .d2+div{
+            background-color: dodgerblue;
+            width: 30px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>第1行</li>
+        <!-- 属性选择器用的是[]可以自定义属性名字 -->
+        <li dada-src="abc">第2行</li>
+        <li>第3行</li>
+        <li>第4行</li>
+        <li>第5行</li>
+        <li>第6行</li>
+        <li>第7行</li>
+        <li>第8行</li>
+        <li>第9行</li>
+        <li>第10行</li>
+    </ul>
+    <!-- 选择父元素的下一个子元素 -->
+    <div class="d1">
+        <div class="d2">
+            <div class="d3"></div>
+        </div>
+    </div>
+    <!-- 选择元素的下一个元素 -->
+    <div></div>
+    <div class="d2"></div>
+    <div>hello world</div>
+    <div>hello world2</div>
+</body>
+</html>

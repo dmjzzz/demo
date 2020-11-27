@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .chat{
+            background-color: green;
+            width: 400px;
+            font-size: 30px;
+            /* 圆角 */
+            border-radius: 30px;
+            /* 不设置高度padding自动居中 */
+            padding: 40px;
+            /* 聊天框居中左右为自动上下为0 */
+            margin: 0 auto;
+            /* 行内文字的高度不用设置高度 */
+            line-height: 100px;
+            /* 父元素相对定位 */
+            position: relative;
+        }
+        /* 伪元素冒号或者双冒号 */
+        
+        .chat:before{
+            content:"";
+            /* 行元素宽没有效果 */
+            display: inline-block; 
+            /* 浏览器显示宽*高不随顺序设置变化 */
+            width: 0px;
+            height:0px;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent ;
+            border-left: 35px solid transparent;
+            border-right: 35px solid green ;
+            /* 子元素绝对定位 */
+            position: absolute;
+            /* 在检查中滑轮移动 */
+            top: 35;
+            /* 具体移动多少看检查的像素宽或者你设置的border宽度的总和 */
+            left: -70px;
+        }
+        .chat:after{
+            content:"";
+        }
+    </style>
+</head>
+<!-- 例如聊天框的小三角 不想通过创建div来实现 通过div会可读性不好
+ 因为没有内容放在里面  只通过css来实现
+创建伪元素 -->
+<body>
+    <div class="chat">
+        吃饭了嘛
+    </div>
+</body>
+</html>
