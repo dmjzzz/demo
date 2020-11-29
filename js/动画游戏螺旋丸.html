@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #d1{
+            width: 300px;
+            height: 200px;
+            /* border: 1px solid skyblue; */
+            background-image: url(../img/mingren.png);
+            /* 背景图片的大小
+            length设置背景图像的高度和宽度。第一个值设置宽度，第二个值设置高度。如果只设置一个值，则第二个值会被设置为 "auto"。
+            percentage以父元素的百分比来设置背景图像的宽度和高度。第一个值设置宽度，第二个值设置高度。如果只设置一个值，则第二个值会被设置为 "auto"。
+            cover把背景图像扩展至足够大，以使背景图像完全覆盖背景区域。背景图像的某些部分也许无法显示在背景定位区域中。
+            contain把图像图像扩展至最大尺寸，以使其宽度和高度完全适应内容区域 */
+            background-size:auto;
+            /* 调节背景图片位置 */
+            /* liner是线性的 steps是阶段性的数字由图片决定 */
+            /* animation: lxw 1s steps(16) infinite; */
+            /* 层数默认0后面的比之前的大 */
+            z-index: 1;
+        }
+        #d2{
+            width: 300px;
+            height: 80px;
+            /* border: 1px solid skyblue; */
+            background-image: url(../img/zuozhu.png);
+            /* 放大就是加元素的倍数
+            百分比是d2的倍数 */
+            background-size:auto;  
+            position:absolute;
+            left: 0px;
+            top: 95px;
+        }
+        .main{
+            width: 800px;
+            height: 500px;
+            border: 1px solid red;
+            position: relative;
+            margin: 0 auto;
+        }
+        @keyframes lxw{
+            for{
+                /* transform是指的d1绕着html去移动是逗号分隔transitong */
+                /* background-position: ;是空格分隔 */
+                background-position: 0px 0px;
+            }
+            to{
+                background-position: 0px -3072px/*向下播放看属性的像素*/
+            }
+        }
+        @keyframes qianniao{
+            for{
+                background-position: 0px 0px;
+            }
+            to{
+                background-position: 0px -4992px;
+            }
+        }
+        /* 加个交互的按钮 */
+        #mingren:checked~#d1{
+            animation: lxw 1s steps(16) infinite;
+        }
+        #zuozhu:checked~#d2{
+            animation: qianniao 2s steps(26) infinite;
+        }
+    </style>
+</head>
+<!-- 鸣人螺旋丸css3动画一帧一帧的动 -->
+<body>
+    <div class="main">
+    <label for="mingren" class="d3" >螺旋丸</label>
+    <input type="checkbox" name="" id="mingren" value="" hidden>
+    <div id="d1"></div>
+    <label for="zuozhu" >千鸟</label>
+    <input type="checkbox" name="" id="zuozhu" value="" hidden>
+    <div id="d2"></div>
+</div>
+</body>
+</html>
