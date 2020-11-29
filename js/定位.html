@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #d1{
+            /* 固定定位相对于浏览器
+            脱离了正常文档流 如果没有定位应该有个div的高度
+            fixed 必须使用方向 top left才能生效 */
+            position: sticky; /*relative相对定位*/ /*absolute*//*sticky*/
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            /* 上下左右是距离上距离右边100px */
+            top: 100px;
+            right: 100px;
+        }
+        #d2{
+            width: 200px;
+            height: 600px;
+            background-color: brown;
+        }
+        #d3{
+            width: 200px;
+            height: 600px;
+            background-color: red;
+        }
+    </style>
+</head>
+<!-- 比如淘宝的搜索栏 渣渣辉的广告
+固定定位：根据浏览器的位置定位 淘宝的搜索栏 脱离了正常文档流
+相对定位:相对于自己当前得位置进行定位 对自己的位置上下左右移动 
+不会脱离文档流 下面的不会排上去 只是样子移动了
+决对定位：相对于设置了定位的父元素或者是祖先元素进行定位 脱离文档流
+找定位的父元素 body 或者html
+静态定位（默认情况，不做定位）
+粘性定位（新出的 兼容不行 和固定定位一样根据浏览器进行定位只是不脱离文档流 ） -->
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+</body>
+</html>

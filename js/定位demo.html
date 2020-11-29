@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d1{
+            width: 400px;
+            height: 400px;
+            background-color: coral;
+            margin: 400px auto;
+            /* 不设置left属性不会动但是还是不脱离文档流只是多了定位属性
+            给绝对定位的子元素进行定位 */
+            position: relative;
+        }
+        img{
+            width: 50px;
+            height: 50px;
+            /* 必须父元素要定位 不然就是相对于body或者浏览器了 */
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="d1">
+        <img src="../img/touxiang.jpg" alt="">
+    </div>
+</body>
+</html>
