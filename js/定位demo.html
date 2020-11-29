@@ -5,14 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /* 浏览器会默认一个margin和padding要重置
+        子元素absolute的定位才会准确（父元素没有定位的情况下） */
+        body {
+            margin: 0;
+            padding: 0;
+        }
         .d1{
             width: 400px;
             height: 400px;
             background-color: coral;
-            margin: 400px auto;
+            margin: 0 auto;
             /* 不设置left属性不会动但是还是不脱离文档流只是多了定位属性
             给绝对定位的子元素进行定位 */
-            position: relative;
+            /* position: relative; */
         }
         img{
             width: 50px;
