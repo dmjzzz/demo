@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #d1{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 动画设置名称 */
+            /* animation是综合的设定和transition一样 */
+            /* animation: donghua1 3s; */
+            animation-name: donghua1;
+            /* 时间 */
+            animation-duration: 1s;
+            /* 贝塞尔曲线 */
+            animation-timing-function: ease;
+            /* 延迟时间 */
+            animation-delay: 0;
+            /* 动画的次数 infinite是无数次 */
+            animation-iteration-count: infinite/*3数字是三次*/;
+            /* 循环模式方向 */
+            animation-direction: alternate/*normal是正常 alternate-reverse奇数反偶数正方向*/;
+            /* 保留最后一帧的效果 */
+            animation-fill-mode: forwards;
+        }
+        /* 设置关键帧 动画把关键帧之间的动画补齐 类似transform的状态
+        就是关键帧 */
+        @keyframes donghua1{
+            /* form{}等同于0 */
+            0%{
+                /* Transform属性应用于元素的2D或3D转换。这个属性允许你将元素旋转，缩放，移动，倾斜等。 */
+                transform:translate(0,0);
+            }
+            /* 中间还可以有更多的状态 */
+            33.3%{
+                /* 平移 右下为正 */
+                transform:translate(200px,0);
+            }
+            /* to{}等同于100*/
+            100%{
+                transform:translate(200px,200px);
+            }
+        }
+    </style>
+</head>
+<!-- css动画比transform更高端 -->
+<body>
+    <div id="d1"> 
+
+    </div>
+</body>
+</html>
