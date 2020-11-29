@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .loading{
+            width: 300px;
+            height: 300px;
+            /* 跟corcle的大小一样给circle设置没用不会动看检查的元素效果 */
+            margin: 0 auto;
+            position: relative;
+        }
+        /* 是子元素就把父元素写上 便于查看
+        空格是选择后代所有是选择器的问题 */
+        .loading .circle{
+            width: 300px;
+            height: 300px;
+            /* 把ciecle盒子重叠在一起就是重叠圆形 */
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        .loading .circle .small{
+            width: 30px;
+            height: 30px;
+            background-color: skyblue;
+            margin: 10px auto;
+            /* 为宽高的一半就是圆形相当于半径15直径30 */
+            border-radius: 15px;
+            /* 设置动画这是所有都有动作可以分开设置每一个圆点 */
+            /* animation: loading 2s infinite无限循环; */
+            /* 线性变化 */
+            animation-timing-function: linear;
+        }
+        /* 设置关键帧 */
+        @keyframes loading{
+            form{
+                opacity: 1;
+            }
+            to{ 
+                opacity: 0.15;
+            }
+        }
+        /* 类可以有多个用子选择器双层的也可以用id不行 */
+        .loading .circle:nth-child(1){
+            transform: rotate(45deg);
+            animation: loading 0.9s infinite;
+        }
+        .loading .circle:nth-child(2){
+            transform: rotate(90deg);
+            animation: loading 0.9s infinite 0.1s;
+        }
+        .loading .circle:nth-child(3){
+            transform: rotate(135deg);
+            animation: loading 0.9s infinite 0.2s;
+        }
+        .loading .circle:nth-child(4){
+            transform: rotate(180deg);
+            animation: loading 0.9s infinite 0.3s;
+        }
+        .loading .circle:nth-child(5){
+            transform: rotate(225deg);
+            animation: loading 0.9s infinite 0.4s;
+        }
+        .loading .circle:nth-child(6){
+            transform: rotate(270deg);
+            animation: loading 0.9s infinite 0.5s;
+        }
+        .loading .circle:nth-child(7){
+            transform: rotate(315deg);
+            animation: loading 0.9s infinite 0.6s;
+        }
+        .loading .circle:nth-child(8){
+            transform: rotate(360deg);
+            animation: loading 0.9s infinite 0.7s;
+        }
+    </style>
+</head>
+<!-- loading制作 -->
+<body>
+    <div class="loading">
+        <div class="circle">
+            <div class="small"></div>
+        </div>
+        <div class="circle">
+            <div class="small"></div>
+        </div>
+        <div class="circle">
+            <div class="small"></div>
+        </div>
+        <div class="circle">
+            <div class="small"></div>
+        </div>
+        <div class="circle">
+            <div class="small"></div>
+        </div>
+        <div class="circle">
+            <div class="small"></div>
+        </div>
+        <div class="circle">
+            <div class="small"></div>
+        </div>
+        <div class="circle">
+            <div class="small"></div>
+        </div>
+    </div>
+</body>
+</html>
