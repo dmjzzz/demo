@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- link也是头文件link不用再style中
+    css文件中有详细注释 -->
+    <link rel="stylesheet" href="../css/iconfont.css">
+</head>
+<!-- 
+fontclass更方便解决你只能去复制不能提示的问题
+引入也更方便 linkcss 因为是用了伪元素所以兼容性只是ie8以上
+font-class 是 Unicode 使用方式的一种变种，主要是解决 Unicode 书写不直观，语意不明确的问题。
+与 Unicode 使用方式相比，具有如下特点：
+兼容性良好，支持 IE8+，及所有现代浏览器。
+相比于 Unicode 语意明确，书写更直观。可以很容易分辨这个 icon 是什么。
+因为使用 class 来定义图标，所以当要替换图标时，只需要修改 class 里面的 Unicode 引用。
+缺憾:不过因为本质上还是使用的字体，所以多色图标还是不支持的。
+ -->
+<body>
+    <!-- 直接修改icon-xxx也就是unicode引用就可以修改
+    挑选相应图标并获取类名，应用于页面 -->
+    <span class="iconfont icon-kefu"></span>
+</body>
+</html>
