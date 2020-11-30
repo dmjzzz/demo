@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            /* 设置为弹性容器
+            未设置之前是div块一个一行 设置之后有浮动的效果是一行了 */
+            display: flex;
+            width: 800px;
+            height: 800px;
+            border: 1px solid skyblue;
+            margin: 0 auto;
+            /* 设置主轴方向
+            row column row-reverse */
+            /* 超出了父元素的宽度也不会换行 只会默认按比例压缩子元素的宽度 */
+            flex-direction: row;
+            /* 设置主轴内容的分布 主轴决定横还是竖的排列
+            flex-start 向主轴的开始位置靠拢 默认值
+            center 向主轴的中心位置靠拢
+            flex-end 向主轴的的结束位置靠拢
+            space-around：平均分布 两边有间距是中间的一半
+            space-between：平均分布 两边没有间距
+            space-evenly(新的)：平均分布 两边有间距跟中间的一样*/
+            justify-content: space-between;
+            /* 设置恻轴的内容分布 
+            flex-start 向侧轴的开始位置靠拢 
+            center 向侧轴的中心位置靠拢
+            flex-end 向侧轴的的结束位置靠拢
+            stretch:拉伸（默认值）子元素有高度所以默认拉伸不起效果 没有高度就会拉伸到父元素的高度*/
+            align-items: center;
+        }
+        /* child为弹性子元素 子元素的子元素就不是弹性子元素了 */
+        .child{
+            width: 200px;
+            height: 200px;
+        }
+        .c1{
+            background-color: slateblue;
+        }
+        .c2{
+            background-color: red;
+        }
+        .c3{
+            background-color: blue;
+        }
+        /* .c4{
+            background-color: hotpink;
+        }
+        .c5{
+            background-color: indigo;
+        }
+        .c6{
+            background-color: yellow;
+        } */
+    </style>
+</head>
+<!-- 浮动布局有塌陷问题不给力
+弹性布局：更加方便更加简单
+弹性容器：设置了display:flex这个元素为弹性容器，里面的子元素会按照弹性布局的方式进行布局
+之前设置的是display:block为浮动布局 
+弹性主轴方向：弹性容器是一行或者一列排的 主轴默认是行
+弹性子元素：弹性容器中的子元素 -->
+<body>
+    <div class="parent">
+        <div class="child c1">
+            1
+        </div>
+        <div class="child c2">
+            2
+        </div>
+        <div class="child c3">
+            3
+        </div>
+        <!-- <div class="child c4">
+            4
+        </div>
+        <div class="child c5">
+            5
+        </div>
+        <div class="child c6">
+            6
+        </div> -->
+    </div>
+</body>
+</html>
