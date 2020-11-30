@@ -25,7 +25,7 @@
             space-between：平均分布 两边没有间距
             space-evenly(新的)：平均分布 两边有间距跟中间的一样*/
             justify-content: space-between;
-            /* 设置恻轴的内容分布 
+            /* 设置恻轴的内容分布 只是设置一行的
             flex-start 向侧轴的开始位置靠拢 
             center 向侧轴的中心位置靠拢
             flex-end 向侧轴的的结束位置靠拢
@@ -39,12 +39,22 @@
         }
         .c1{
             background-color: slateblue;
+            /* 子元素的自由排序！设置在子元素上 从小到大排序
+            单独设置子元素的恻轴
+            center:居中
+            flex-start:靠近恻轴开端
+            flex-end:靠近恻轴结束
+            stretch:拉伸 */
+            align-self: flex-end;
+            order: 2;
         }
         .c2{
             background-color: red;
+            order: 3;
         }
         .c3{
             background-color: blue;
+            order: 1;
         }
         /* .c4{
             background-color: hotpink;

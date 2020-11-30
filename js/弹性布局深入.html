@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            display: flex;
+            width: 800px;
+            height: 800px;
+            border: 1px solid skyblue;
+            margin: 0 auto;
+            flex-direction: row;
+            justify-content: space-evenly;
+            /* 设置单行 */
+            align-items: center;
+            /* 设置换行flex-wrap 默认不换行*/
+            flex-wrap: wrap;
+            /* 设置多行样式  就得去设置换行
+            flex-start 向侧轴的开始位置靠拢 
+            center 向侧轴的中心位置靠拢
+            flex-end 向侧轴的的结束位置靠拢
+            space-around：平均分布 两边有间距是中间的一半
+            space-between：平均分布 两边没有间距
+            space-evenly(新的)：平均分布 两边有间距跟中间的一样*/
+            align-content:space-around;
+        }
+        .child{
+            width: 200px;
+            height: 200px;
+        }
+        .c1{
+            background-color: slateblue;
+        }
+        .c2{
+            background-color: red;
+        }
+        .c3{
+            background-color: blue;
+        }
+        .c4{
+            background-color: hotpink;
+        }
+        .c5{
+            background-color: indigo;
+        }
+        .c6{
+            background-color: yellow;
+        } 
+        .c4{
+            background-color: hotpink;
+        }
+        .c5{
+            background-color: indigo;
+        }
+        .c6{
+            background-color: yellow;
+        } 
+        .c4{
+            background-color: hotpink;
+        }
+        .c5{
+            background-color: indigo;
+        }
+        .c6{
+            background-color: yellow;
+        } 
+    </style>
+</head>
+<body>
+    <body>
+        <div class="parent">
+            <div class="child c1">
+                1
+            </div>
+            <div class="child c2">
+                2
+            </div>
+            <div class="child c3">
+                3
+            </div>
+            <div class="child c4">
+                4
+            </div>
+            <div class="child c5">
+                5
+            </div>
+            <div class="child c6">
+                6
+            </div> 
+            <div class="child c4">
+                4
+            </div>
+            <div class="child c5">
+                5
+            </div>
+            <div class="child c6">
+                6
+            </div> 
+            <div class="child c4">
+                4
+            </div>
+            <div class="child c5">
+                5
+            </div>
+            <div class="child c6">
+                6
+            </div> 
+        </div>
+</body>
+</html>

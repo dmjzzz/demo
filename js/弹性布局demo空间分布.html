@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* div的容器是body不设置就是块元素 设置了相当于浮动一行 */
+            display: flex;
+        }
+        .left{
+            background-color: skyblue;
+            /* 剩余空间分布设置 */
+            flex: 1;
+        }
+        .main{
+            background-color: red;
+            /* 剩余空间分布设置除去设置宽度的 占2份上面占1份 */
+            flex: 2;
+        }
+        .ad{
+            background-color: slategray;
+            width: 200px;
+        }
+    </style>
+</head>
+<!-- 侧边栏书主要内容的一半
+广告栏固定是200px
+弹性布局剩余空间分布设置 -->
+<body>
+    <div class="left">
+        <h1>侧边栏</h1>
+    </div>
+    <div class="main">
+        <h1>主要内容</h1>
+    </div>
+    <div class="ad">
+        <h1>我是渣渣辉快来砍我</h1>
+    </div>
+</body>
+</html>
