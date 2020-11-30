@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 响应式一定要写viewport
+    不一定所有都要响应式 淘宝就是东西太多 所有分开 苹果东西少可以写 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d1{
+            width: 50%;
+            height: 200px;
+            background-color: skyblue;
+        }
+        /* 媒体查询  可以三合一进行页面设置为什么百度没有这么设置呢 因为编程麻烦
+        什么都能什么都不能 有一些移动和pc的个性设置设置不了
+        移动1 pc1 响应式就是1.5 用户只要1 占用带宽
+        移动端的设定
+        设定小于600像素时候的样式 */
+        @media only screen and (max-width: 200px) {
+            .d1{
+                width: 100%;
+                background-color: red;
+            }
+        }
+        /*pc端设定
+         设定大于1200像素的样式 */
+        @media only screen and (min-width: 1200px) {
+            .d1{
+                width: 33%;
+                background-color: yellow;
+            }
+        }
+        /* 平板设定 */
+        @media only screen and (min-width: 600px) and (max-width: 1200px){
+            .d1{
+                width: 50%;
+                background-color: pink;
+            }
+        }
+    </style>
+</head>
+<!-- 一般情况下，一个项目会划分pc端和移动端的页面可以在检查中刷新查看network
+来看用户代理的代码 用户代理就是浏览器
+pc移动的响应式页面：适应pc的页面和移动端页面
+响应式页面就是pc和移动端一样的页面 可以检查查看 例如苹果页面-->
+<body>
+    <!-- 大屏幕pc端的时候，d1占据50%宽度
+    小屏幕移动端的时候占据100%宽度 -->
+    <div class="d1"></div>
+</body>
+</html>

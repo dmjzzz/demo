@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <!-- viewport视窗的设置 你一个web网页移动端打开手机会缩小字体
+    所以得加个标签设置移动端的渲染方式
+    宽度设置浏览器宽度分辨率等于移动端的系统宽度分辨率
+    初始化比例是1
+    最小的缩小比例1
+    最大的放大比例1
+    用户不可以缩放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0，
+    minimun-scale=1,maximum-scale=1,user-scalable=0">
+    <!-- 物理分辨率苹果8 750*13345寸    -- 1300*700电脑的14寸
+        现在手机和电脑的分辨率差不多 要是尺寸变小就会显得字小 所以系统分辨率
+        就是把4个物理分辨率合成一个系统分辨率来看 字就会大了 
+        要是分辨率调节的不够4个或者1.8个1.7个比例计算不好就会有锯齿感
+    系统分辨率375*667
+适配的方式  假如你做一个网页手机的系统分辨率不一样岂不是看起来都不一样
+所以把宽度定死 就会同一适配 在检查中去看 还有body会有自带margin一般设计
+都会把body搞成o
+content="width=750px" -->
+    <title>Document</title>
+</head>
+<body>
+    <h1>helloworld</h1>
+    <div>
+        helloworld
+    </div>
+</body>
+</html>
