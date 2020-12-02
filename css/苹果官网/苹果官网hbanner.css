@@ -1,0 +1,39 @@
+/* 上面也有banner所以更详细的选择器去选择 */
+.hbanner{
+    display: flex;
+    background-color: #ccc;
+}
+.hbanner .banner{
+    flex: 1;
+    /* 图片的大小剩下的出来的才是背景的颜色所以要设置高度 */ 
+    height: 450px;
+}
+.hbanner .banner:nth-child(1){
+    margin: 10px 5px 10px 10px;
+    background-image: url(../../img/苹果官网/hbanner1.jpg);
+}
+.hbanner .banner:nth-child(2){
+    margin: 10px 10px 10px 5px;
+    background-image: url(../../img/苹果官网/hbanner2.jpg);
+}
+/* 设置不同像素下的banner和hbanner的媒体查询
+boxsizing盒子模型 
+文字啊 图片啊都去设定固定的像素  一个人的力量有限就不设置了*/
+@media only screen and (max-width:1100px){
+    .banner{
+        height: 595px;
+    }
+}
+@media only screen and (max-width:740px){
+    .banner{
+        height: 445px;
+    }
+    /* 两行变一行 flex的主轴方向变了就行 */
+    .hbanner{
+        flex-direction: column;
+        height: 1020px;
+    }
+    .hbanner .banner{
+        margin: 10px;
+    }
+}

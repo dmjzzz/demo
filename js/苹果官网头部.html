@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 响应式设置 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 可读性强 在css里写样式 引入 -->
+    <link rel="stylesheet" href="../css/苹果官网/苹果官网头部.css">
+    <link rel="stylesheet" href="../css/苹果官网/苹果官网banner.css">
+    <link rel="stylesheet" href="../css/苹果官网/苹果官网hbanner.css">
+</head>
+<!-- 响应式官网页面：苹果 弹性布局 meatviwport media
+移动端页面淘宝：天猫 弹性布局 meatviewport -->
+<body>
+    <!-- 
+    1.先写页面结构 注意页面是否包含移动端 包含移动端一定要加上metaviewport
+    2.写html结构
+    3.再写样式-->
+
+
+
+    <!-- 头部 -->
+    <div class="nav">
+        <!-- 可以点的链接用a -->
+        <a href="" class="logo"></a>
+        <a href="" class="text">MAC</a>
+        <a href="" class="text">IPAD</a>
+        <a href="" class="text">IPHONE</a>
+        <a href="" class="text">WATCH</a>
+        <a href="" class="text">TV</a>
+        <a href="" class="text">MUSIC</a>
+        <a href="" class="text">SUPPORT</a>
+        <a href="" class="search"></a>
+        <a href="" class="buy"></a>
+        <!-- 没有学js用css的话用input的复选框链接label实现可以点击 -->
+        <input type="checkbox" name="choose" id="choose" hidden>
+        <label for="choose" class="toggleBtn">
+            <span class="line"></span>
+            <span class="line"></span>
+        </label>
+        <!-- checkbox按钮是css的功能选中后面的东西进行交互 学了js就可以全部进行交互了
+        -->
+        <!-- 先写结构在写html的格式 再去改样式 -->
+        <div class="navpage">
+            <div class="navMain">
+                <div class="searchInput">
+                    <div class="icon"></div>
+                    <!-- 预置文字 -->
+                    <input type="text" placeholder="search apple.com">
+                </div>
+                <hr>
+                <div class="navList">
+                    <a href="" class="navText">MAC</a>
+                    <a href="" class="navText">IPAD</a>
+                    <a href="" class="navText">IPHONE</a>
+                    <a href="" class="navText">WATCH</a>
+                    <a href="" class="navText">TV</a>
+                    <a href="" class="navText">MUSIC</a>
+                    <a href="" class="navText">SUPPORT</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+       <!-- banner块 代码必须一个div都是一行或者一竖 再细分就是一行中的两个 代码才好管理
+    清晰 -->
+    <div class="banner">
+        <h1>iPhone 11 Pro</h1>
+        <h2>自我再飞跃。</h2>
+        <p>RMB 354 每月或 RMB 8499 起，还可折抵换购。</p>
+        <div class="link"><a href="">进一步了解></a><a href="">购买></a></div>
+    </div>
+
+
+<!-- hbanner -->
+    <div class="hbanner">
+        <div class="banner">
+            <h1>MacBook Air</h1>
+            <h2>实力，来的轻巧。</h2>
+            <br>
+            <div class="link"><a href="">进一步了解></a><a href="">购买></a></div>
+        </div>
+        <div class="banner">
+            <h1>WATCH</h1>
+            <h2>健康的未来，现在戴上</h2>
+            <br>
+            <div class="link"><a href="">进一步了解></a></div>
+        </div>
+    </div>
+
+
+</body>
+</html>

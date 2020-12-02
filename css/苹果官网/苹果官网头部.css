@@ -1,0 +1,217 @@
+/* css先去初始化样式 */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* 头部的盒子 */
+.nav{
+    width: 100%; /*默认就是100%*/
+    height: 44px; /*可以在检查苹果页面元素看到*/
+    background-color: rgba(0,0,0, 0.92);/*r红色 g绿色 b蓝色 a透明度*/
+    display: flex; /*弹性布局让元素居中*/
+    justify-content: center;
+    align-items: center;/*一行元素恻轴居中*/
+}
+.nav a{
+    color: white;
+    /* 设置下划线  a标签默认样式underline*/
+    text-decoration: none;
+    /* 设置了弹性布局 子元素可以设置宽度就算不是块元素 */
+    width: 102px;
+    text-align: center;
+}
+.nav .logo{
+    /* 发现没有高度 */
+    height: 44px;
+    background-image: url(../../img/苹果官网/logo.svg);
+    /* 设置背景图片不重复 */
+    background-repeat: no-repeat;
+    /* 图片不在a的中间 */
+    background-position: center;
+}
+.nav .search{
+    height: 19px;
+    background-image: url(../../img/苹果官网/search.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.nav .buy{
+    height: 44px;
+    background-image: url(../../img/苹果官网/buy.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* 切换按钮盒子 */
+.toggleBtn{
+    height: 44px;
+    /* 两个span的line的线是垂直分布的 弹性布局 */
+    display: flex;
+    /* 刚开始也是不显示的 */
+    display: none;
+    /* 主轴的方向是竖直的排列 */
+    flex-direction: column;
+    /* 设置主轴的有间隔没有间隔的分布 
+    或者你让line类去magin一个上下的高度 在justify center向中心靠拢*/
+    /* justify-content: space-evenly; */
+    justify-content: center;
+    /* 恻轴的居中一行的那种不是多行换行的swap */
+    align-items:center;
+}
+/* 切换按钮两个线 */
+.toggleBtn .line{
+    height: 1px;
+    width: 18px;
+    background-color: #fff;/*fff白色*/
+    margin: 11px;
+    /* 刚开始不存在 */
+    display: none; 
+}
+/* 双杠的div不显示开始 */
+.navpage{
+    /* 页面有个过渡的效果
+    但是因为是display none到block的转换会看不到 */
+    height: 0vh;
+    width: 100vw;
+    /* display: none; */
+    /* navpage能看到了 去隐藏了 没有none就要考虑脱离文档流 */
+    display: flex;
+    transition: all 0.8s;
+    /* 给一个元素中设置overflow:hidden，那么该元素的内容若超出了给定的宽度和高度属性
+    那么超出的部分将会被隐藏，不占位。 */
+    overflow: hidden;
+    position: fixed;
+        left: 0;
+        top: 0;
+    background-color: #000;
+}
+.navpage .navList{
+    width: 92vw;
+}
+/* 设定屏幕小于768像素时的样式 */
+@media only screen and (max-width:768px){
+    .toggleBtn{
+        display: block;
+        /* z-index设置层掩盖的层的展示顺序有了定位才有效 */
+        position: relative;
+        z-index: 100;
+    }
+    .nav .logo{
+        position: relative;
+        z-index: 100;
+    }
+    .toggleBtn .line{
+        /*变成移动端就是显示*/
+        display: block;
+
+    }
+    .nav .text,.nav .search{
+        /*移动端不显示*/
+        display: none;
+    }
+    .nav{
+        /*居中方式变了 是两边没有间距 中间有间距*/
+        justify-content: space-between;
+    }
+    .nav a,.nav label{
+        /*点击的范围变小*/
+        width: 40px;
+    }
+    /* 弹性子元素变换位置就可以用order来重新排序 */
+    .nav .toggleBtn{
+        order: 1;
+    }
+    .nav .logo{
+        order: 2;
+    }
+    .nav .buy{
+        order: 3;
+    }
+    /* 属性choose的cheked状态下的toggleBtn的line的第一个子元素 */
+    #choose:checked~.toggleBtn .line:nth-child(1){
+        /* 设置旋转中心点x号的形成旋转点在旋转之前！！！！！ */
+        transform-origin: left;
+        /*平面的转动 默认按照中心点*/
+        transform: rotate(45deg);
+      
+    }
+    /* 一个x号位置不对调整margin或者什么元素 */
+    #choose:checked~.toggleBtn .line:nth-child(2){
+        transform-origin: left;
+        transform: rotate(-45deg);
+        
+    }
+    /* 设定复选框为选中状态时，导航页面为展开 */
+    #choose:checked~.navpage{
+        /* 设置其中的文字弹性布局只有子元素去生效 */
+        display: flex;
+        /* vw:viewport width:100vw== 100% viewport width
+           vh:viewport height:100vh== 100% viewport height*/
+        width: 100vw;
+        height: 100vh;
+        /* 因为是浏览器的全部占据可以用固定定位
+        固定定位必须使用方向才能生效 */
+        position: fixed;
+        left: 0;
+        top: 0;
+        /* 背景黑色 */
+        background-color:#000 ;
+        /* 字体白色 */
+        color: white;
+        /* 文字是竖着的 */
+        flex-direction: column;
+        padding: 44px 0;
+    }
+    .searchInput{
+        margin: 0 28px 20px;
+        /* 去调节搜索和输入栏的布局 */
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 36px;
+        border-radius: 4px;
+        color: white;
+        background-color: rgba(45, 45, 45, 0.92);
+    }
+    .searchInput .icon{
+        width: 32px;
+        height: 16px;
+        background-image: url(../../img/苹果官网/search.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        /* 设置图片背景时，一定要考虑图片url 重复 位置 尺寸 */
+    }
+    .searchInput input{
+        flex: 1;
+        margin: 0 10px;
+        height: 100%;
+        /* input的颜色也可以设置 */
+        background-color: transparent;
+        /* 边框也去掉 */
+        border: none;
+        /* outline是点击后的边框也就是border外面的框 */
+        outline: none;
+        color: white;
+    }
+    hr{
+        border: #333;
+    }
+    .navList{
+        margin: 0 28px;
+        display: flex;
+        flex-direction: column;
+        /* 默认的可以不写 */
+        justify-content: flex-start;
+    }
+    .navList a{
+        width: 100%;
+        height: 44px;
+        color: white;
+        /* 文字靠左 */
+        text-align: left;
+        line-height: 44px;
+        border-bottom: 1px solid #333;
+    }
+    .navList a:last-child{
+        border-bottom: none;
+    }
+}
