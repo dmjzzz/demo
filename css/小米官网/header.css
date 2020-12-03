@@ -20,7 +20,7 @@ body{
     /* 默认是水平分布就可以不设置 */
     flex-direction: column;
     /* 上面固定 会有东西看不到那是因为固定定位的脱离文档流 sticky就不脱离文档流 */
-    position: sticky;
+    position: fixed;
     left: 0;
     top: 0;
 }
