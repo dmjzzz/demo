@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 只是不同的手机有一个放大缩小的效果改变 所以改变width 
+    设置浏览器窗口的分辨率为设计稿的分辨率点了切换app版还得重新加载才行才会变成app版 -->
+    <meta name="viewport" content="width=375px, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/小米官网/header.css">
+    <link rel="stylesheet" href="../css/小米官网/main.css">
+</head>
+<!-- 小米官网移动端的就不用考虑响应式的像素改变然后画面改变，只是不同的手机有一个
+放大缩小的效果 -->
+<body>
+    <!-- 去分div只有横着或者竖着的排列去划分 -->
+    <!-- 头部 -->
+    <div class="header">
+        <!-- 头部的搜索栏 -->
+        <div class="headerTop">
+            <div class="logo"></div>
+            <div class="search">
+                <div class="icon"></div>
+                <input type="text" placeholder="搜索产品名称">
+            </div>
+            <div class="user"></div>
+        </div>
+        <!-- 头部的导航栏 -->
+        <div class="headerNav">
+            <a href="" class="active">推荐</a>
+            <a href="">手机</a>
+            <a href="">智能</a>
+            <a href="">电视</a>
+            <a href="">笔记本</a>
+            <a href="">生活周边</a>
+            <!-- span好 行元素 不用div去设置成行元素 网页的小点击一般图片占带宽
+            但是省事  设计师给你 你就用 -->
+            <input type="checkbox" name="choose" id="choose" value="" hidden>
+            <label for="choose" class="xhicon"></label>
+            <div class="xhk">
+                <div class="xhkMain">
+                    <div class="xhkTop">全部</div>
+                    <div class="xhkList1">
+                        <a href="" class="active">推荐</a>
+                        <a href="">手机</a>
+                        <a href="">智能</a>
+                        <a href="">电视</a>
+                    </div>
+                    <div class="xhkList2">
+                        <a href="">笔记本</a>
+                        <a href="">生活周边</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 轮播图 -->
+    <div class="swiper">
+
+    </div>
+     <!-- 图标列表 -->
+    <div class="iconList">
+        <a href="" class="iconItem"><img src="../img/小米官网/icon1.png" alt=""></a>
+        <a href="" class="iconItem"><img src="../img/小米官网/icon2.png" alt=""></a>
+        <a href="" class="iconItem"><img src="../img/小米官网/icon3.png" alt=""></a>
+        <a href="" class="iconItem"><img src="../img/小米官网/icon4.png" alt=""></a>
+        <a href="" class="iconItem"><img src="../img/小米官网/icon5.png" alt=""></a>
+        <a href="" class="iconItem"><img src="../img/小米官网/icon6.png" alt=""></a>
+        <a href="" class="iconItem"><img src="../img/小米官网/icon7.png" alt=""></a>
+        <a href="" class="iconItem"><img src="../img/小米官网/icon8.png" alt=""></a>
+        <a href="" class="iconItem"><img src="../img/小米官网/icon9.png" alt=""></a>
+        <a href="" class="iconItem"><img src="../img/小米官网/icon10.png" alt=""></a>
+    </div>
+    <!-- 图片广告区 banner -->
+    <div class="banner">
+        <div class="lbanner"></div>
+        <div class="rbanner">
+            <div class="rlbanner"></div>
+            <div class="rrbanner"></div>
+        </div>
+    </div>
+    <!-- 图片广告区 -->
+    <div class="banner2">
+        <div class="lbanner2"></div>
+        <div class="rbanner2"></div>
+    </div>
+    <!-- 每日精选区域 列表 列表元素 标题 描述 价格 购买按钮 -->
+    <div class="pdList">
+        <div class="pdItem">
+            <img src="../img/小米官网/jx1.jpg" alt="">
+            <div class="title">Redmi k30 4G</div>
+            <div class="brief">120Hz流速屏，全速热爱</div>
+            <div class="price">1399起</div>
+            <div class="buyBtn">立即购买</div>
+        </div>
+        <div class="pdItem">
+            <img src="../img/小米官网/jx2.jpg" alt="">
+            <div class="title">Redmi k30 5G</div>
+            <div class="brief">双模5G，120Hz流速屏</div>
+            <div class="price">1599起</div>
+            <div class="buyBtn">立即购买</div>
+        </div>
+        <div class="pdItem">
+            <img src="../img/小米官网/jx3.jpg" alt="">
+            <div class="title">Redmi Note 8 Pro</div>
+            <div class="brief">6400万全场景四摄</div>
+            <div class="price">1299起</div>
+            <div class="buyBtn">立即购买</div>
+        </div>
+        <div class="pdItem">
+            <img src="../img/小米官网/jx4.jpg" alt="">
+            <div class="title">Redmi Note 8</div>
+            <div class="brief">千元4800万四摄</div>
+            <div class="price">899起</div>
+            <div class="buyBtn">立即购买</div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="footer">
+        <div class="fIcon"><div class="img"></div><span>首页</span></div>
+        <div class="fIcon"><div class="img"></div><span>分类</span></div>
+        <div class="fIcon"><div class="img"></div><span>星球</span></div>
+        <div class="fIcon"><div class="img"></div><span>购物车</span></div>
+        <div class="fIcon"><div class="img"></div><span>我的</span></div>
+    </div>
+</body>
+</html>

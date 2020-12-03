@@ -1,0 +1,237 @@
+/* 轮播图 */
+.swiper{
+    width: 375px;
+    height: 188px;
+    background-image: url(../../img/小米官网/swiper.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+}
+/* 图标列表 */
+.iconList{
+    width: 375px;
+    height: 160px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.iconList .iconItem{
+    /* 弹性布局 可换行2行 20%正好10个 */
+    width: 20%;
+    height: 80px;
+}
+.iconList .iconItem>img{
+    width: 100%;
+    height: 100%;
+}
+/* ad banner */
+.banner{
+    width: 375px;
+    height: 265px;
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+.banner .lbanner{
+    height: 265px;
+    width: 186px;
+    background-image: url(../../img/小米官网/img1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+.banner .rbanner{
+    height: 265px;
+    width: 186px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.banner .rbanner .rlbanner{
+    width: 186px;
+    height: 131px;
+    background-image: url(../../img/小米官网/img2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+.banner .rbanner .rrbanner{
+    width: 186px;
+    height: 131px;
+    background-image: url(../../img/小米官网/img3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+.banner2{
+    width: 375px;
+    height: 500px;
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.banner2 .lbanner2{
+    width: 100%;
+    height: 196px;
+    background-image: url(../../img/小米官网/img4.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+.banner2 .rbanner2{
+    width: 100%;
+    height: 296px;
+    background-image: url(../../img/小米官网/img5.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+/* 精选部分内容 */
+.pdList{
+    width: 375px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    /* footer挡住了文字用padding 或者用粘性定位 */
+}
+.pdList .pdItem{
+    width: 50%;
+    height: 253px;
+    padding: 3px 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pdList .pdItem img{
+    width: 100%;
+    height: auto;
+}
+.pdList .pdItem .title{
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.87);
+    padding-top: 5px;
+}
+.pdList .pdItem .brief{
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.54);
+}
+.pdList .pdItem .price{
+    font-size: 15px;
+    color: #ea625b;
+}
+.pdList .pdItem .buyBtn{
+    width: 105px;
+    height: 31px;
+    text-align: center;
+    line-height: 31px;
+    color: #fff;
+    background-color: #ea625b;
+    border-radius: 4px;
+    font-size: 13px;
+}
+/* 底部导航 */
+.footer{
+    width: 375px;
+    display: flex;
+    background-color: #fff;
+    box-shadow: 0 -2px 10px #ccc;
+    /* 粘性定位不脱离文档流 不考虑有东西被挡住的情况 */
+    position: sticky;
+    left: 0;
+    bottom: 0;
+}
+.footer .fIcon{
+    width: 20%;
+    height: 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer .fIcon .img{
+    width: 21px;
+    height: 21px;
+}
+.footer .fIcon span{
+    color: #999;
+    font-size: 12px
+}
+/* .foot .fIcom .img:nth-child(1)不对 在第一个重复的地方使用nth */
+.footer .fIcon:nth-child(1) .img{
+    background-image: url(../../img/小米官网/home1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+.footer .fIcon:nth-child(2) .img{
+    background-image: url(../../img/小米官网/home3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+.footer .fIcon:nth-child(3) .img{
+    background-image: url(../../img/小米官网/home5.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+.footer .fIcon:nth-child(4) .img{
+    background-image: url(../../img/小米官网/home7.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+.footer .fIcon:nth-child(5) .img{
+    background-image: url(../../img/小米官网/home9.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+/* 点击切换图片 选中的状态 用hover 只有input才有check状态 移动端的hover就是check
+因为是你的手指去触摸的 不可能触摸了没有点击 */
+.footer .fIcon:nth-child(1):hover .img{
+    background-image: url(../../img/小米官网/home2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+.footer .fIcon:nth-child(2):hover .img{
+    background-image: url(../../img/小米官网/home4.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+.footer .fIcon:nth-child(3):hover .img{
+    background-image: url(../../img/小米官网/home6.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+.footer .fIcon:nth-child(4):hover .img{
+    background-image: url(../../img/小米官网/home8.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+.footer .fIcon:nth-child(5):hover .img{
+    background-image: url(../../img/小米官网/home10.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+/* 字体变颜色 文字是会继承的 但是上面的优先级高 还是老实去写 */
+.footer .fIcon:nth-child(1):hover span{
+    color: #ff6700;
+}
+.footer .fIcon:nth-child(2):hover span{
+    color: #ff6700;
+}
+.footer .fIcon:nth-child(3):hover span{
+    color: #ff6700;
+}
+.footer .fIcon:nth-child(4):hover span{
+    color: #ff6700;
+}
+.footer .fIcon:nth-child(5):hover span{
+    color: #ff6700;
+}
